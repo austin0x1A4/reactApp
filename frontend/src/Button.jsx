@@ -1,18 +1,19 @@
 
 function Button(){
-    const styles = {
-    
-            backgroundColor: "hsl(200, 100%, 50%)",
-            color: "white",
-            padding: "10px 20px",
-            borderRadius: "5px",
-            border: "none",
-            cursor: "pointer",
-          
-        
+    //const handleClick = () => console.log("OUCH");
+    let count = 0;
+    const handleClick2 = (name) => {
+        if(count <3){
+            count++;
+            console.log(`${name} you clicked me ${count} time/s`)
+        }
+        else{
+            console.log(`${name} stop clicking me!`) 
+        }
+ 
     }
     return(
-        <button style={styles}>click me</button>
+        <button onClick={() => handleClick2("Austin")}>click me</button>
     );
 }
 export default Button
